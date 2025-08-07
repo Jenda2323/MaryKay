@@ -1,0 +1,169 @@
+/* Reset a základní nastavení */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HTML a body */
+html,
+body {
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #000000;
+  background-color: rgba(236, 232, 229, 255);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main s Grid */
+main {
+  display: grid;
+  grid-template-areas:
+    "logo"
+    "price"
+    "discount";
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0px 10px 20px 20px;
+}
+p {
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Obrázek nahoře */
+main img {
+  grid-area: logo;
+  display: block;
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Cena produktu */
+#price-section {
+  grid-area: price;
+}
+
+/* Slevy dole */
+#discount-section {
+  grid-area: discount;
+}
+
+/* Sekce jako boxy */
+section {
+  background: rgba(240, 197, 192, 255);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+/* Formuláře */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+/* Inputy */
+input {
+  padding: 12px 15px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  align-self: center;
+  width: 90%;
+}
+
+input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Tlačítka */
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #667eea;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #048004;
+  transform: translateY(-2px);
+}
+.button-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 10px 0;
+}
+/* Tlačítka slev */
+.discount-btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.plus,
+.minus {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #667eea;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 50px;
+}
+
+.plus:hover,
+.minus:hover {
+  background: #048004;
+  transform: translateY(-2px);
+}
+
+/* Responzivní design */
+@media (max-width: 768px) {
+  main {
+    padding: 0px 10px 10px 10px;
+  }
+
+  input {
+    width: 100%;
+  }
+  .button-group {
+    gap: 10px;
+  }
+}
