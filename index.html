@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MaryKayCalculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <img src="Images/MaryKay.png" alt="MaryKayCalculator" />
+
+      <!-- Price section -->
+      <section id="price-section" class="price-section">
+        <form class="price-form">
+          <label for="price">Cena produktu (Kč) :</label>
+          <input type="number" id="price" name="price" step="0.01" placeholder="0 Kč" required />
+
+          <div class="button-group">
+            <button type="button" id="plus" class="plus" aria-label="Zvýšit cenu">+</button>
+            <button type="button" id="minus" class="minus" aria-label="Snížit cenu">-</button>
+          </div>
+
+          <label for="total-price">Cena celkem (Kč) :</label>
+          <input type="number" id="total-price" name="total-price" placeholder="0 Kč" readonly />
+
+          <label for="dph-price">Cena s DPH(21%) :</label>
+          <input type="number" id="dph-price" class="dph-price" name="dph-price" placeholder="0 Kč" readonly />
+        </form>
+      </section>
+      <!-- Price section -->
+
+      <!-- discount section -->
+      <section id="discount-section" class="discount-section">
+        <p>Slevy</p>
+        <div class="discount-btns">
+          <button type="button" class="discount-btn35" id="discount-btn35">35%</button>
+          <button type="button" class="discount-btn40" id="discount-btn40">40%</button>
+          <button type="button" class="discount-btn45" id="discount-btn45">45%</button>
+        </div>
+
+        <form class="discount-form">
+          <label for="discount-price">Cena s DPH po slevě :</label>
+          <input type="number" id="discount-price" class="discount-price" name="discount-price" placeholder="0 Kč" readonly />
+        </form>
+      </section>
+      <!-- discount section -->
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
