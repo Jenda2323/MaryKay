@@ -13,14 +13,14 @@
       <!-- Price section -->
       <section id="price-section" class="price-section">
         <form class="price-form">
-          <label for="price">Cena produktu (Kč) :</label>
+          <label for="price">Cena produktu :</label>
           <input type="number" id="price" name="price" step="0.01" placeholder="0 Kč" required />
 
           <div class="button-group">
             <button type="button" id="plus" class="plus" aria-label="Zvýšit cenu">+</button>
             <button type="button" id="minus" class="minus" aria-label="Snížit cenu">-</button>
           </div>
-          <label for="total-price">Cena celkem (Kč) :</label>
+          <label for="total-price">Cena celkem :</label>
           <div class="input-kc">
             <input type="number" id="total-price" name="total-price" placeholder="0" readonly />
           </div>
@@ -32,7 +32,7 @@
       <!-- DPH section -->
       <section id="dph-section" class="dph-section">
         <form class="dph-form">
-          <label for="dph-price">Cena s DPH(21%) :</label>
+          <label for="dph-price">Cena s DPH (21%) :</label>
           <div class="input-kc">
             <input type="number" id="dph-price" class="dph-price" name="dph-price" placeholder="0" readonly />
           </div>
@@ -43,7 +43,7 @@
 
       <!-- Discount section -->
       <section id="discount-section" class="discount-section">
-        <p>Slevy</p>
+        <h2 style="text-align: center">Slevy</h2>
         <div class="discount-btns">
           <button type="button" class="discount-btn35" id="discount-btn35">35%</button>
           <button type="button" class="discount-btn40" id="discount-btn40">40%</button>
@@ -55,7 +55,7 @@
           <div class="input-kc">
             <input type="number" id="discount-price" class="discount-price" name="discount-price" placeholder="0" readonly />
           </div>
-          <p>Po slevě: <span class="discount-formatted">0,00 Kč</span></p>
+          <p><span class="discount-formatted">0,00 Kč</span></p>
         </form>
       </section>
       <!-- discount section -->
