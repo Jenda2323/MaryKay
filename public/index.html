@@ -20,17 +20,28 @@
             <button type="button" id="plus" class="plus" aria-label="Zvýšit cenu">+</button>
             <button type="button" id="minus" class="minus" aria-label="Snížit cenu">-</button>
           </div>
-
           <label for="total-price">Cena celkem (Kč) :</label>
-          <input type="number" id="total-price" name="total-price" placeholder="0 Kč" readonly />
-
-          <label for="dph-price">Cena s DPH(21%) :</label>
-          <input type="number" id="dph-price" class="dph-price" name="dph-price" placeholder="0 Kč" readonly />
+          <div class="input-kc">
+            <input type="number" id="total-price" name="total-price" placeholder="0" readonly />
+          </div>
+          <p><span class="total-formatted">0,00 Kč</span></p>
         </form>
       </section>
       <!-- Price section -->
 
-      <!-- discount section -->
+      <!-- DPH section -->
+      <section id="dph-section" class="dph-section">
+        <form class="dph-form">
+          <label for="dph-price">Cena s DPH(21%) :</label>
+          <div class="input-kc">
+            <input type="number" id="dph-price" class="dph-price" name="dph-price" placeholder="0" readonly />
+          </div>
+          <p><span class="dph-formatted">0,00 Kč</span></p>
+        </form>
+      </section>
+      <!-- DPH section -->
+
+      <!-- Discount section -->
       <section id="discount-section" class="discount-section">
         <p>Slevy</p>
         <div class="discount-btns">
@@ -41,7 +52,10 @@
 
         <form class="discount-form">
           <label for="discount-price">Cena s DPH po slevě :</label>
-          <input type="number" id="discount-price" class="discount-price" name="discount-price" placeholder="0 Kč" readonly />
+          <div class="input-kc">
+            <input type="number" id="discount-price" class="discount-price" name="discount-price" placeholder="0" readonly />
+          </div>
+          <p>Po slevě: <span class="discount-formatted">0,00 Kč</span></p>
         </form>
       </section>
       <!-- discount section -->

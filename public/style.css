@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Itim";
+  src: url("Fonts/Itim.ttf");
+}
 /* Reset a základní nastavení */
 * {
   margin: 0;
@@ -9,7 +13,8 @@
 html,
 body {
   height: 100%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Itim", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1rem;
   line-height: 1.6;
   color: #000000;
   background-color: rgba(236, 232, 229, 255);
@@ -27,11 +32,22 @@ main {
   grid-template-areas:
     "logo"
     "price"
+    "dph"
     "discount";
   gap: 20px;
   max-width: 800px;
   margin: 0 auto;
   padding: 0px 10px 20px 20px;
+}
+#price-section {
+  grid-area: price;
+}
+#dph-section {
+  grid-area: dph;
+}
+/* Slevy dole */
+#discount-section {
+  grid-area: discount;
 }
 p {
   font-weight: 800;
@@ -50,14 +66,6 @@ main img {
 }
 
 /* Cena produktu */
-#price-section {
-  grid-area: price;
-}
-
-/* Slevy dole */
-#discount-section {
-  grid-area: discount;
-}
 
 /* Sekce jako boxy */
 section {
@@ -93,6 +101,7 @@ input {
   border: 2px solid #e1e5e9;
   border-radius: 8px;
   font-size: 16px;
+  font-family: "Itim", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   transition: border-color 0.3s ease;
   align-self: center;
   width: 90%;
@@ -103,7 +112,28 @@ input:focus {
   border-color: #667eea;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
-
+.input-kc {
+  position: relative;
+  display: none;
+}
+.input-kc input {
+  display: none;
+}
+.input-kc::after {
+  content: "Kč";
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  pointer-events: none;
+}
+span {
+  font-size: 1.2rem;
+  color: #fc1111;
+  margin-bottom: 10px;
+  text-align: center;
+}
 /* Tlačítka */
 button {
   padding: 12px 20px;
@@ -111,6 +141,7 @@ button {
   border-radius: 8px;
   background: #667eea;
   color: white;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -132,7 +163,7 @@ button:hover {
   gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 10px 0;
+  margin: 10px 10px;
 }
 
 .plus,
