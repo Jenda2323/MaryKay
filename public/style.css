@@ -52,7 +52,6 @@ main {
 p {
   font-weight: 800;
   color: #000000;
-  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -129,10 +128,13 @@ input:focus {
   pointer-events: none;
 }
 span {
+  font-weight: 600;
   font-size: 1.2rem;
-  color: #fc1111;
-  margin-bottom: 10px;
+  color: #000000;
   text-align: center;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  padding: 0.4rem;
 }
 /* Tlačítka */
 button {
@@ -145,6 +147,7 @@ button {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  min-width: 50px;
 }
 
 button:hover {
@@ -166,34 +169,12 @@ button:hover {
   margin: 10px 10px;
 }
 
-.plus,
-.minus {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 8px;
-  background: #667eea;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  min-width: 50px;
-}
-
-.plus:hover,
-.minus:hover {
-  background: #048004;
-  transform: translateY(-2px);
-}
-
 /* Responzivní design */
 @media (max-width: 768px) {
   main {
     padding: 0px 10px 10px 10px;
   }
 
-  input {
-    width: 100%;
-  }
   .button-group {
     gap: 10px;
   }
